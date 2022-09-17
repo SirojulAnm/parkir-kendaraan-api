@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "40c451b1-b3b7-4e45-a18f-fece556116f0",
+		"name": "Bounche",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6138933"
+	},
+	"item": [
+		{
+			"name": "auth/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "admin satu",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "p",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/auth/register",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "anam@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/auth/login",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2JvdW5jaGVcL2JvdW5jaGFwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjYzMTM5NzU2LCJleHAiOjE2NjMxNDMzNTYsIm5iZiI6MTY2MzEzOTc1NiwianRpIjoiOWQ1UG5qeEd1U1BGNE50QiIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.hPVqm35sL_TD2byJb-eXfxTh7wPhmj0XRlp-DTguL7s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{local}}/auth/user-profile",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"auth",
+						"user-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/refresh",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2JvdW5jaGVcL2JvdW5jaGFwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjYzMTQ4MzM5LCJleHAiOjE2NjMxNTE5MzksIm5iZiI6MTY2MzE0ODMzOSwianRpIjoiQ2lFeUZTOFRmWlpCdDlRTSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.EwbuIJIX8WbLdA6YgT2l2dcr-nK887q-nQ9jfc1wPo8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{local}}/auth/refresh",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2JvdW5jaGVcL2JvdW5jaGFwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjYzMTM5NzU2LCJleHAiOjE2NjMxNDMzNTYsIm5iZiI6MTY2MzEzOTc1NiwianRpIjoiOWQ1UG5qeEd1U1BGNE50QiIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.hPVqm35sL_TD2byJb-eXfxTh7wPhmj0XRlp-DTguL7s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{local}}/auth/logout",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2JvdW5jaGVcL2JvdW5jaGFwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjYzMTQ4MDQwLCJleHAiOjE2NjMxNTE2NDAsIm5iZiI6MTY2MzE0ODA0MCwianRpIjoiZk5TeDQ1WjhBS0cxUDVkOCIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JNgLIOECViAZ_GloRTM1m55uoAcQQrlXd0recacHSx8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{local}}/plat",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"plat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Plat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2JvdW5jaGVcL2JvdW5jaGFwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjYzMTYzMjQ3LCJleHAiOjE2NjMxNjY4NDcsIm5iZiI6MTY2MzE2MzI0NywianRpIjoiMWR2T3BxamdtVHRzTDdLSSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.66SxEsy3MoGTUiL0eMalJP-9Q8x57POeuBm4H6bt45A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "B 1111 C",
+							"type": "text"
+						},
+						{
+							"key": "check_in",
+							"value": "2022-09-10 10:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/plat",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"plat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Plat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2JvdW5jaGVcL2JvdW5jaGFwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjYzMzg4OTE1LCJleHAiOjE2NjMzOTI1MTUsIm5iZiI6MTY2MzM4ODkxNSwianRpIjoieExkcEJsU1k4N1lrQ1ZJTyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.qMus6LEBto2_e9RH64Apa-AOwGVPXOxEz5ozvDHK76c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "check_out",
+							"value": "2022-09-10 20:00:00",
+							"type": "text"
+						},
+						{
+							"key": "unique_code",
+							"value": "42394af9-d6ae-4280-ad35-9ea2fd4e9baa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/plat/update",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"plat",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "127.0.0.1/bounche/bounchapi/public/api",
+			"type": "string"
+		}
+	]
+}
